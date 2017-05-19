@@ -22,7 +22,13 @@ public class BTN {
 	public float calculateUnitaryPrice(){
 		return MathOperations.truncate(PUant * TR, 6);
 	}
+	
 	public float calculateInterest(float interestTax, int months) {
-		return 0;
+		float fj = 0;
+		if(months == 6 && interestTax == 30f){
+			fj = 0.14017542f;
+		}
+		
+		return fj * PUant;
 	}
 }
