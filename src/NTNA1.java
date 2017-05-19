@@ -35,7 +35,7 @@ public class NTNA1 {
 	}
 
 	public float calculatePUAmortization() {
-		return 0.0F;
+		return (this.baseDolarQuotation/this.endDolarQuotation) * this.liquidValue;
 	}
 
 	
