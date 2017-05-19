@@ -1,9 +1,11 @@
+import static org.junit.Assert.*;
+import org.junit.*;
 
 public class BTNTest {
 	BTN btn;
 	
 	@Before
-	public setUp(){
+	public void setUp(){
 		btn = new BTN();
 	}
 
@@ -11,6 +13,6 @@ public class BTNTest {
 	public void testUnitaryPriceCalculation(){
 		btn.setTR(1.025);
 		btn.setPUant(100);
-		assertEquals(btn.calculateUnitaryPrice(), 102.5);
+		assertEquals(btn.calculateUnitaryPrice(), 102.5, 0);
 	}
 }
