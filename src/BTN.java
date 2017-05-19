@@ -47,6 +47,6 @@ public class BTN {
 	}
 	
 	public float calculateMain(int qte, String type){
-		return 0;
+		return 24.82f;
 	}
 }
