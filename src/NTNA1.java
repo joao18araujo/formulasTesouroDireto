@@ -39,7 +39,7 @@ public class NTNA1 {
 	}
 
 	public void setLiquidValue(float emissionValue, float amortizationPercentual) {
-		this.liquidValue = 28.109675F;		
+		this.liquidValue = emissionValue*amortizationPercentual;		
 	}
 
 	
