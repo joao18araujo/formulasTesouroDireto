@@ -1,6 +1,9 @@
+import java.util.Date;
 
 public class LFT {
 
+	private Date baseDate;
+	private Date endDate;
 	private float nominalValueBase;	
 
 	public LFT(float nominalValueBase) {
@@ -17,6 +20,22 @@ public class LFT {
 
 	public void setNominalValueBase(float nominalValueBase) {
 		this.nominalValueBase = nominalValueBase;
+	}
+	
+	public Date getBaseDate() {
+		return baseDate;
+	}
+
+	public void setBaseDate(Date baseDate) {
+		this.baseDate = baseDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 }
