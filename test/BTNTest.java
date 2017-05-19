@@ -27,4 +27,10 @@ public class BTNTest {
 		btn.setPUus(1.6545f);
 		assertEquals(24.82, btn.calculateMain(15, "USS"), 1e-2);
 	}
+	
+	@Test
+	public void testMainCalculationWithPUat(){
+		btn.setPUat(1.6888f);
+		assertEquals(25.33, btn.calculateMain(15, "AT"), 1e-2);
+	}
 }
