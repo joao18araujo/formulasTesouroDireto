@@ -47,6 +47,11 @@ public class BTN {
 	}
 	
 	public float calculateMain(int qte, String type){
-		return 24.82f;
+		float answer = 0;
+		if(type == "USS"){
+			answer = PUus * qte;
+		}
+		
+		return answer;
 	}
 }
