@@ -25,9 +25,6 @@ public class BTN {
 	
 	public double calculateInterest(float interestTax, int months) {
 		double fj = Math.pow(1 + interestTax/100.0, months/12.0) - 1;
-		System.out.println(fj);
-		System.out.println(fj + " " + fj * PUant);
-		
 		return fj * PUant;
 	}
 }
