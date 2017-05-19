@@ -1,24 +1,28 @@
 
 public class BTN {
-	private double TR;
-	private double PUant;
+	private float TR;
+	private float PUant;
+
 	
-	public double getTR() {
+	public float getTR() {
 		return TR;
 	}
-	public void setTR(double tR) {
+	public void setTR(float tR) {
 		TR = tR;
 	}
 	
-	public double getPUant() {
+	public float getPUant() {
 		return PUant;
 	}
 	
-	public void setPUant(double pUant) {
+	public void setPUant(float pUant) {
 		PUant = pUant;
 	}
 	
-	public double calculateUnitaryPrice(){
+	public float calculateUnitaryPrice(){
 		return MathOperations.truncate(PUant * TR, 6);
+	}
+	public float calculateInterest(float interestTax, int months) {
+		return 0;
 	}
 }
