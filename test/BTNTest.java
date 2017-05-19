@@ -13,6 +13,6 @@ public class BTNTest {
 	public void testUnitaryPriceCalculation(){
 		btn.setTR(1.025);
 		btn.setPUant(100);
-		assertEquals(btn.calculateUnitaryPrice(), 102.5, 0);
+		assertEquals(btn.calculateUnitaryPrice(), 102.5, 1e-6);
 	}
 }

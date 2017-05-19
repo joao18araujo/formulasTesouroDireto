@@ -19,9 +19,6 @@ public class BTN {
 	}
 	
 	public double calculateUnitaryPrice(){
-		if(PUant == 100 && TR == 1.025){
-			return 102.5;
-		}
-		return 0;
+		return MathOperations.truncate(PUant * TR, 6);
 	}
 }
