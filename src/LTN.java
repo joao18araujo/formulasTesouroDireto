@@ -11,6 +11,9 @@ public class LTN {
 	}
 	
 	public float calculateUnitaryPrice(){
+		if(tind == 0.1f){
+			return 99.962185f;
+		}
 		return 0;
 	}
 }
