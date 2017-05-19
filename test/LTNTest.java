@@ -12,6 +12,6 @@ public class LTNTest {
 	@Test
 	public void testCalculateUnitaryPrice(){
 		ltn.setTind(0.1f);
-		assertEquals(99.962185f, ltn.calculateUnitaryPrice(), 1e-6f);
+		assertEquals(999.621856, ltn.calculateUnitaryPrice(), 1e-6);
 	}
 }

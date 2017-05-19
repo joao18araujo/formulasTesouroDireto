@@ -10,10 +10,8 @@ public class LTN {
 		tind = Tind;
 	}
 	
-	public float calculateUnitaryPrice(){
-		if(tind == 0.1f){
-			return 99.962185f;
-		}
-		return 0;
+	public double calculateUnitaryPrice(){
+		double pu = 1000/(Math.pow(1 + tind, 1/252f));
+		return pu;
 	}
 }
