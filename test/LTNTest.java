@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class LTNTest {
-	LTN ltn;
+	private LTN ltn;
 	
 	@Before
 	public void setUp(){

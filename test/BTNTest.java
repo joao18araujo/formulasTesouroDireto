@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class BTNTest {
-	BTN btn;
+	private BTN btn;
 	
 	@Before
 	public void setUp(){
