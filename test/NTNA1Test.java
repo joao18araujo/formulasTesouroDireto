@@ -20,5 +20,14 @@ public class NTNA1Test {
 		
 		assertEquals(0.945363F, ntna1.calculatePUAmortization(), (float)1.0E-6F);
 	}
-
+	
+	@Test
+	public void testLiquidValueCalculation() throws Exception {
+		float emissionValue = 112.4387F;
+		float amortizationPercentual = 0.25F;
+		
+		ntna1.setLiquidValue(emissionValue, amortizationPercentual);
+		
+		assertEquals(28.109675F, ntna1.getLiquidValue(), (float)1.0E-6F);
+	}
 }

@@ -1,0 +1,47 @@
+[33mcommit 2a0e43a53762be7add4ea3b037deda1c776fe9f4[m
+Author: Mateus Manuel <mateusmanuel@unb.br>
+Date:   Fri May 19 13:47:42 2017 -0300
+
+    Implementing the PU Amortization calculation on NTNA1 class
+
+[33mcommit bfd2f59e2c3477556df24627a429c54640d06673[m
+Author: Mateus Manuel <mateusmanuel@unb.br>
+Date:   Fri May 19 13:43:59 2017 -0300
+
+    Creating NTNA1 class just to test pass
+    
+    Signed-off-by: João Vitor Araujo <joao18araujo@gmail.com>
+    Signed-off-by: Mateus Manuel <mateusmanuel21@gmail.com>
+
+[33mcommit 9c1a403fc24bdd326f4c5e6fe6613aaf2609984d[m
+Author: Mateus Manuel <mateusmanuel@unb.br>
+Date:   Fri May 19 13:36:36 2017 -0300
+
+    Creating test to PUAmortization for NTN-A1
+    
+    Signed-off-by: João Vitor Araujo <joao18araujo@gmail.com>
+    Signed-off-by: Mateus Manuel <mateusmanuel21@gmail.com>
+
+[33mcommit d56d0a14f1e554a3aad6ea94f47407b1c58d17c5[m
+Author: Mateus Manuel <mateusmanuel21@hotmail.com>
+Date:   Thu May 18 22:02:17 2017 -0300
+
+    Creating test for LTF class
+    
+    Signed-off-by: Mateus Manuel <mateusmanuel21@hotmail.com>
+    Signed-off-by: João Vitor Araujo <joao18araujo@gmail.com>
+
+[33mcommit acaa966171b42147c401aef7aa143765169a219b[m
+Author: João Vitor Araujo <joao18araujo@gmail.com>
+Date:   Wed May 10 17:33:01 2017 -0300
+
+    Creating first test for BTN class
+    
+    Signed-off-by: João Vitor Araujo <joao18araujo@gmail.com>
+    Signed-off-by: Mateus Manuel <mateusmanuel21@gmail.com>
+
+[33mcommit de706219c0600cc221a23a25e21a5ee9760416f5[m
+Author: Andre Luiz Peron Martins Lanna <andrelanna@users.noreply.github.com>
+Date:   Wed May 10 16:24:37 2017 -0300
+
+    Initial commit
