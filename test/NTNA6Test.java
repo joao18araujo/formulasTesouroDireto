@@ -25,8 +25,8 @@ public class NTNA6Test {
 	
 	@Test
 	public void testInterestCalculation() throws ParseException{
-		Date dtp = new SimpleDateFormat("dd/MM/yyyy").parse("10/05/2017");
-		Date dtup = new SimpleDateFormat("dd/MM/yyyy").parse("30/06/2017");
+		Date dtp = new SimpleDateFormat("dd/MM/yyyy").parse("30/06/2017");
+		Date dtup = new SimpleDateFormat("dd/MM/yyyy").parse("10/05/2017");
 		double interest = 4;
 		
 		ntna6.setVNA(2350.56);
