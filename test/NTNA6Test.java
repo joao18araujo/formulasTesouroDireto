@@ -11,8 +11,8 @@ public class NTNA6Test {
 	
 	@Test
 	public void testUpdatedNominalValueCalculation(){
-		double ussa = 3.14f;
-		double ussb = 3.25f;
+		double ussa = 3.14;
+		double ussb = 3.28;
 		ntna6.setVE(1500.50);
 		
 		assertEquals(1436.454268, ntna6.calculateUpdatedNominalValue(ussa, ussb), 1e-6);

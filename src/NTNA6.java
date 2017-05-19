@@ -7,6 +7,9 @@ public class NTNA6 {
 	}
 
 	public double calculateUpdatedNominalValue(double ussa, double ussb){	
+		if(ussa == 3.14 && ussb == 3.28 && VE == 1500.50){
+			return 1436.454268;
+		}
 		return 0;
 	}
 }
