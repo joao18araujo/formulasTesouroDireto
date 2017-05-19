@@ -19,6 +19,6 @@ public class BTNTest {
 	@Test
 	public void testInterestCalculation(){
 		btn.setPUant(100);
-		assertEquals(btn.calculateInterest(30f, 6), 14.017542f, 1e-6f);
+		assertEquals(btn.calculateInterest(30, 6), 14.017542, 1e-6);
 	}
 }

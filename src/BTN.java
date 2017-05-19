@@ -20,14 +20,13 @@ public class BTN {
 	}
 	
 	public float calculateUnitaryPrice(){
-		return MathOperations.truncate(PUant * TR, 6);
+		return PUant * TR;
 	}
 	
-	public float calculateInterest(float interestTax, int months) {
-		float fj = 0;
-		if(months == 6 && interestTax == 30f){
-			fj = 0.14017542f;
-		}
+	public double calculateInterest(float interestTax, int months) {
+		double fj = Math.pow(1 + interestTax/100.0, months/12.0) - 1;
+		System.out.println(fj);
+		System.out.println(fj + " " + fj * PUant);
 		
 		return fj * PUant;
 	}
