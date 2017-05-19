@@ -11,8 +11,14 @@ public class BTNTest {
 
 	@Test
 	public void testUnitaryPriceCalculation(){
-		btn.setTR(1.025);
+		btn.setTR(1.025f);
 		btn.setPUant(100);
 		assertEquals(btn.calculateUnitaryPrice(), 102.5, 1e-6);
+	}
+	
+	@Test
+	public void testInterestCalculation(){
+		btn.setPUant(100);
+		assertEquals(btn.calculateInterest(30f, 6), 14.017542f, 1e-6f);
 	}
 }
