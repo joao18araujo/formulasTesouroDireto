@@ -1,3 +1,4 @@
+import java.util.Date;
 
 public class NTNA6 {
 	private double VE;
@@ -9,5 +10,9 @@ public class NTNA6 {
 	public double calculateUpdatedNominalValue(double ussa, double ussb){	
 		double VNA = ussa/ussb * VE; 
 		return VNA;
+	}
+
+	public double calculateInterest(Date dtp, Date dtup, double interest) {
+		return 0;
 	}
 }
