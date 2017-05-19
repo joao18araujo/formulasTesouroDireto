@@ -1,14 +1,17 @@
+import static org.junit.Assert.*;
 import org.junit.*;
 
 public class LTNTest {
+	LTN ltn;
+	
 	@Before
 	public void setUp(){
-		LTN ltn = new LTN();
+		ltn = new LTN();
 	}
 	
 	@Test
 	public void testCalculateUnitaryPrice(){
-		ltn.setTind(1.22);
-		assertEquals(99.962185, ltn.calculateUnitaryPrice(), 1e-6f);
+		ltn.setTind(1.22f);
+		assertEquals(99.962185f, ltn.calculateUnitaryPrice(), 1e-6f);
 	}
 }
