@@ -18,13 +18,13 @@ public class BTNTest {
 	
 	@Test
 	public void testInterestCalculation(){
-		btn.setPUant(100);
+		btn.setPUat(100);
 		assertEquals(14.017542, btn.calculateInterest(30, 6), 1e-6);
 	}
 	
 	@Test
 	public void testMainCalculationWithPUus(){
-		btn.setPUus(1.6545);
+		btn.setPUus(1.6545f);
 		assertEquals(24.82, btn.calculateMain(15, "USS"), 1e-2);
 	}
 }
