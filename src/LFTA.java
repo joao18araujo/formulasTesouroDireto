@@ -1,5 +1,5 @@
 
-public class LFTB {
+public class LFTA {
 
 	public final float aditionalTax = 0.000245F;
 	
