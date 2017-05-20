@@ -1,3 +1,5 @@
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class NTNA1 {
 	
@@ -41,7 +43,5 @@ public class NTNA1 {
 	public void setLiquidValue(float emissionValue, float amortizationPercentual) {
 		this.liquidValue = emissionValue*amortizationPercentual;		
 	}
-
-	
 
 }
