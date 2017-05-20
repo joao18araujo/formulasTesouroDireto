@@ -1,55 +1,71 @@
 
 public class LFTB {
+
+	public final float aditionalTax = 0.000245F;
 	
-	private long du;
-	private long dut;
-	private int p;
-	private int n;
-	private float ve;
+	private long workingDays;
+	private long nextWorkingDays;
+	private int quantityPortion;
+	private int quantityAmortizedPortion;
+	private float nominalValue;
 	
-	public float calculateActualNominal(float c) {
-		return (float) ((c * ve * Math.pow(1 + (0.000245F/100.0F), du/dut)) - 
-			   ((c * ve * Math.pow(1 - 0.000245F, du/dut)) * (1/(p-n))));  
-	}	
-	
-	public float getVe() {
-		return ve;
+	public float calculateActualNominalValue(float productFactor) {	
+		return calculateFirstStep(productFactor) - (calculateSecondStep(productFactor) * calculateThirdStep());  
 	}
 
-	public void setVe(float ve) {
-		this.ve = ve;
+	private float calculateThirdStep() {
+		return 1.0F/(float)(quantityPortion-quantityAmortizedPortion);
 	}
 
-	public long getDu() {
-		return du;
+	private float calculateSecondStep(float productFactor) {
+		return (float) (productFactor * nominalValue * Math.pow(1 - aditionalTax, workingDays/nextWorkingDays));
+	}
+
+	private float calculateFirstStep(float productFactor) {
+		return (float) (productFactor * nominalValue * Math.pow(1 + (aditionalTax/100.0F), workingDays/nextWorkingDays));
 	}
 	
-	public void setDu(long du) {
-		this.du = du;
+	public float getNominalValue() {
+		return nominalValue;
+	}
+
+	public void setNominalValue(float ve) {
+		this.nominalValue = ve;
+	}
+
+	public long getWorkingDays() {
+		return workingDays;
 	}
 	
-	public long getDut() {
-		return dut;
+	public void setWorkingDays(long du) {
+		this.workingDays = du;
 	}
 	
-	public void setDut(long dut) {
-		this.dut = dut;
+	public long getNextWorkingDays() {
+		return nextWorkingDays;
 	}
 	
-	public int getP() {
-		return p;
+	public void setNextWorkingDays(long dut) {
+		this.nextWorkingDays = dut;
 	}
 	
-	public void setP(int p) {
-		this.p = p;
+	public int getQuantityPortion() {
+		return quantityPortion;
 	}
 	
-	public int getN() {
-		return n;
+	public void setQuantityPortion(int p) {
+		this.quantityPortion = p;
 	}
 	
-	public void setN(int n) {
-		this.n = n;
+	public int getQuantityAmortizedPortion() {
+		return quantityAmortizedPortion;
 	}
 	
+	public void setQuantityAmortizedPortion(int n) {
+		this.quantityAmortizedPortion = n;
+	}
+	
+	public float getAditionalTax() {
+		return aditionalTax;
+	}
 }

@@ -10,16 +10,17 @@ public class LFTBTest {
 	@Before
 	public void setUp() throws Exception{
 		lftb = new LFTB();
+		
+		lftb.setNominalValue(102.216F);
+		lftb.setWorkingDays(194);
+		lftb.setNextWorkingDays(358);
+		lftb.setQuantityPortion(60);
+		lftb.setQuantityAmortizedPortion(45);
 	}	
 	
 	@Test
-	public void testActualNominalValueCalculation() throws Exception {
-		lftb.setVe(102.216F);
-		lftb.setDu(194);
-		lftb.setDut(358);
-		lftb.setP(60);
-		lftb.setN(45);
-		
-		assertEquals(135.0069F, lftb.calculateActualNominal(1.3208F), (float)1.0E-6F);
+	public void testActualNominalValueCalculation() throws Exception {	
+		assertEquals(126.00644F, lftb.calculateActualNominalValue(1.3208F), (float)1.0E-6F);
 	}
+
 }
