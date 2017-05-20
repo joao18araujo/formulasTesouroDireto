@@ -45,15 +45,23 @@ public class NTNA1 {
 	}
 
 	public float calculateInterestFactor(Date dtp, Date dtup, float interestTax) {
-		return 0.0001625F;
+		long periodDays = TimeUnit.DAYS.convert(dtup.getTime() - dtp.getTime(), TimeUnit.MILLISECONDS);
+		
+		return ((float) periodDays / 360.0F) * (interestTax / 100.0F);
 	}
 	
 	public float calculateInterestFactorSum(float... interestFactors) {
-		return 0.00096F;
+		float sum = 0.0F;
+		
+		for(int i = 0; i < interestFactors.length; ++i) {
+			sum += interestFactors[i];
+		}
+		
+		return sum;
 	}
 
 	public float calculateInterest(float PUAmortization, float interestFactorSum) {
-		return 0.00015321F;
+		return PUAmortization * interestFactorSum;
 	}
 
 }
