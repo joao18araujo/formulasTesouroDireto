@@ -8,7 +8,8 @@ public class LFTB {
 	private float ve;
 	
 	public float calculateActualNominal(float c) {
-		return 135.0069F;
+		return (float) ((c * ve * Math.pow(1 + (0.000245F/100.0F), du/dut)) - 
+			   ((c * ve * Math.pow(1 - 0.000245F, du/dut)) * (1/(p-n))));  
 	}	
 	
 	public float getVe() {
@@ -50,4 +51,5 @@ public class LFTB {
 	public void setN(int n) {
 		this.n = n;
 	}
+	
 }
