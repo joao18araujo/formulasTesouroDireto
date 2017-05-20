@@ -4,15 +4,15 @@ public class NTNA3 {
 	float endDolarQuotation;
 	
 	public float calculateNominalValue() {
-		return 943.15686F;
+		return (this.baseDolarQuotation / this.endDolarQuotation) * 1000.0F;
 	}
 	
 	public float calculateInterestFactor(int i, int n) {
-		return 0.0025F;
+		return (float) ((i/100.0) * (n/12.0));
 	}
 	
 	public float calculateInterest(float nominalValue, float interestFactor) {
-		return 1.5719281F;
+		return nominalValue * interestFactor;
 	}
 	
 	public float getBaseDolarQuotation() {
