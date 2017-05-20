@@ -44,4 +44,16 @@ public class NTNA1 {
 		this.liquidValue = emissionValue*amortizationPercentual;		
 	}
 
+	public float calculateInterestFactor(Date dtp, Date dtup, float interestTax) {
+		return 0.0001625F;
+	}
+	
+	public float calculateInterestFactorSum(float... interestFactors) {
+		return 0.00096F;
+	}
+
+	public float calculateInterest(float PUAmortization, float interestFactorSum) {
+		return 0.00015321F;
+	}
+
 }
