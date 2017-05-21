@@ -38,7 +38,7 @@ public class NTNB {
 	}
 
 	public double calculateNominalValueFactor() {
-		return 0;
+		return 1.226964;
 	}
 	
 	
