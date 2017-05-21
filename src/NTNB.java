@@ -5,6 +5,8 @@ public class NTNB {
 	private int dc;
 	private int dct;
 	
+	private double nominalValueFactor;
+	
 	public double getIPCAt1() {
 		return IPCAt1;
 	}
@@ -38,7 +40,8 @@ public class NTNB {
 	}
 
 	public double calculateNominalValueFactor() {
-		return 1.226964;
+		nominalValueFactor = Math.pow(IPCAt1 / IPCAt0, 1.0 * dc / dct);
+		return nominalValueFactor;
 	}
 	
 	
