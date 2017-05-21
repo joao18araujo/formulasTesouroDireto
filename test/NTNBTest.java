@@ -20,4 +20,15 @@ public class NTNBTest {
 		assertEquals(1.226964, ntnb.calculateNominalValueFactor(), 1e-6);
 	}
 
+	@Test
+	public void testNominalValueFactorCalculation2(){
+		ntnb.setIPCAt1(2.04);
+		ntnb.setIPCAt0(1.35);
+		ntnb.setDc(35);
+		ntnb.setDct(60);
+		
+		assertEquals(1.272300, ntnb.calculateNominalValueFactor(), 1e-6);
+	}
+
+	
 }
