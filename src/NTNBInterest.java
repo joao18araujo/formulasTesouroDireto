@@ -6,9 +6,11 @@ public class NTNBInterest {
 	int dcp;
 	int dct;
 	
+	double intestFactor;
+	
 
 	public double calculateIntestFactor() {
-		return 1.00260747;
+		return Math.pow(Math.pow((this.i/100.0) + 1.0, this.n/12.0), 1.0 * dcp/dct);
 	}
 	
 	public double getI() {
