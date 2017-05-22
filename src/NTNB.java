@@ -9,6 +9,7 @@ public class NTNB {
 	private double VN;
 	
 	private double nominalValueFactor;
+	private double nominalValue;
 	
 	public double getIPCAt1() {
 		return IPCAt1;
@@ -59,12 +60,20 @@ public class NTNB {
 	}
 
 	public double calculateNominalValueFactor() {
-		nominalValueFactor = Math.pow(IPCAt1 / IPCAt0, 1.0 * dc / dct);
+		nominalValueFactor = truncate(Math.pow(IPCAt1 / IPCAt0, 1.0 * dc / dct), 6);
 		return nominalValueFactor;
 	}
 
 	public double calculateNominalValue() {
-		return 4967.997887 * (VN == 0 ? 0 : 1);
+		calculateNominalValueFactor();
+		
+		nominalValue = nominalValueFactor * (IPCAt / IPCAt0) * VN;
+		
+		return nominalValue;
+	}
+	
+	private double truncate(double number, int positions){
+		return number - number % Math.pow(10, -positions);
 	}
 	
 	
