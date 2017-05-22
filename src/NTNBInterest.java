@@ -8,7 +8,7 @@ public class NTNBInterest {
 	
 
 	public double calculateIntestFactor() {
-		return 0;
+		return 1.00260747;
 	}
 	
 	public double getI() {
