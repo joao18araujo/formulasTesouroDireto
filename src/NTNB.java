@@ -5,6 +5,9 @@ public class NTNB {
 	private int dc;
 	private int dct;
 	
+	private double IPCAt;
+	private double VN;
+	
 	private double nominalValueFactor;
 	
 	public double getIPCAt1() {
@@ -39,9 +42,29 @@ public class NTNB {
 		this.dct = dct;
 	}
 
+	public double getIPCAt() {
+		return IPCAt;
+	}
+
+	public void setIPCAt(double iPCAt) {
+		IPCAt = iPCAt;
+	}
+
+	public double getVN() {
+		return VN;
+	}
+
+	public void setVN(double vN) {
+		VN = vN;
+	}
+
 	public double calculateNominalValueFactor() {
 		nominalValueFactor = Math.pow(IPCAt1 / IPCAt0, 1.0 * dc / dct);
 		return nominalValueFactor;
+	}
+
+	public double calculateNominalValue() {
+		return 0;
 	}
 	
 	
