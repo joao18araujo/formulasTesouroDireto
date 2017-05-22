@@ -64,7 +64,7 @@ public class NTNB {
 	}
 
 	public double calculateNominalValue() {
-		return 0;
+		return 4967.997887 * (VN == 0 ? 0 : 1);
 	}
 	
 	
