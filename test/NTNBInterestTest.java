@@ -21,4 +21,13 @@ public class NTNBInterestTest {
 		assertEquals(1.00260747, ntnbInterest.calculateIntestFactor(), 1e-8);
 	}
 
+	@Test
+	public void testInterestFactorCalculation2() throws Exception {
+		ntnbInterest.setI(1.23);
+		ntnbInterest.setN(3);
+		ntnbInterest.setDcp(120);
+		ntnbInterest.setDct(115);
+		
+		assertEquals(1.00319421, ntnbInterest.calculateIntestFactor(), 1e-8);
+	}	
 }
