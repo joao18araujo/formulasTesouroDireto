@@ -16,7 +16,8 @@ public class NTNBInterest {
 	}
 	
 	public double calculateInterest() {
-		return 1807.540145;
+		this.interest = truncate(vna * (interestFactor-1.0), 6);
+		return this.interest;
 	}
 	
 
