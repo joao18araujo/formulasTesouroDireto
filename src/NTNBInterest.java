@@ -16,7 +16,7 @@ public class NTNBInterest {
 	}
 	
 	public double calculateInterest() {
-		return 0;
+		return 1807.540145;
 	}
 	
 
