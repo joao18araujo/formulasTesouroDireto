@@ -11,31 +11,40 @@ import org.junit.runners.Parameterized.Parameters;
 public class NTNBInterestTest {
 	
 	NTNBInterest ntnbInterest;
-	double expected;
+	double interestFactorExpected;
+	double interestExpected;
 	
-	public NTNBInterestTest(double i, int n, int dcp, int dct, double expected) {
+	public NTNBInterestTest(double i, int n, int dcp, int dct, double interestFactorExpected, double interestFactor, double vna, double interestExpected) {
 		ntnbInterest = new NTNBInterest();
 		
 		ntnbInterest.setI(i);
 		ntnbInterest.setN(n);
 		ntnbInterest.setDcp(dcp);
 		ntnbInterest.setDct(dct);
+		ntnbInterest.setVna(vna);
+		ntnbInterest.setInterestFactor(interestFactor);
 		
-		this.expected = expected;
+		this.interestExpected = interestExpected;
+		this.interestFactorExpected = interestFactorExpected;
 	}
 	
 	@Parameters
 	public static Iterable data(){
 		return Arrays.asList(new Object[][]{
-			{0.49, 6, 423, 397, 1.00260747},
-			{1.23, 3, 120, 115, 1.00319421},
-			{2.4353, 2, 60, 48, 1.00502533}
+			{0.49, 6, 423, 397, 1.00260747, 1.84569612, 2137.34, 1807.540145},
+			{1.23, 3, 120, 115, 1.00319421, 0, 0, 0},
+			{2.4353, 2, 60, 48, 1.00502533, 0, 0, 0}
 		});
 	}
 	
 	@Test
 	public void testInterestFactorCalculation() throws Exception {
-		assertEquals(expected, ntnbInterest.calculateIntestFactor(), 1e-8);
+		assertEquals(interestFactorExpected, ntnbInterest.calculateIntestFactor(), 1e-8);
+	}
+	
+	@Test
+	public void testInterestCalculation() throws Exception {
+		assertEquals(interestExpected, ntnbInterest.calculateIntest(), 1e-6);
 	}
 
 }

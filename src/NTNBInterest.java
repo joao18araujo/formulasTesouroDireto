@@ -10,7 +10,7 @@ public class NTNBInterest {
 	
 
 	public double calculateIntestFactor() {
-		return Math.pow(Math.pow((this.i/100.0) + 1.0, this.n/12.0), 1.0 * dcp/dct);
+		return truncate(Math.pow(Math.pow((this.i/100.0) + 1.0, this.n/12.0), 1.0 * dcp/dct), 8);
 	}
 	
 	public double getI() {
@@ -45,4 +45,7 @@ public class NTNBInterest {
 		this.dct = dct;
 	}
 	
+	private double truncate(double number, int positions){
+		return number - number % Math.pow(10, - positions);		  	
+	}
 }
