@@ -5,14 +5,37 @@ public class NTNBInterest {
 	int n;
 	int dcp;
 	int dct;
+	double vna;
 	
-	double intestFactor;
+	double interestFactor;
+	double interest;
 	
-
-	public double calculateIntestFactor() {
-		return truncate(Math.pow(Math.pow((this.i/100.0) + 1.0, this.n/12.0), 1.0 * dcp/dct), 8);
+	public double calculateInterestFactor() {
+		this.interestFactor = truncate(Math.pow(Math.pow((this.i/100.0) + 1.0, this.n/12.0), 1.0 * dcp/dct), 8); 
+		return this.interestFactor;
 	}
 	
+	public double calculateInterest() {
+		return 0;
+	}
+	
+
+	public double getVna() {
+		return vna;
+	}
+
+	public void setVna(double vna) {
+		this.vna = vna;
+	}
+
+	public double getInterestFactor() {
+		return interestFactor;
+	}
+
+	public void setInterestFactor(double interestFactor) {
+		this.interestFactor = interestFactor;
+	}
+
 	public double getI() {
 		return i;
 	}

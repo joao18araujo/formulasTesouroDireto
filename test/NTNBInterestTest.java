@@ -39,12 +39,12 @@ public class NTNBInterestTest {
 	
 	@Test
 	public void testInterestFactorCalculation() throws Exception {
-		assertEquals(interestFactorExpected, ntnbInterest.calculateIntestFactor(), 1e-8);
+		assertEquals(interestFactorExpected, ntnbInterest.calculateInterestFactor(), 1e-8);
 	}
 	
 	@Test
 	public void testInterestCalculation() throws Exception {
-		assertEquals(interestExpected, ntnbInterest.calculateIntest(), 1e-6);
+		assertEquals(interestExpected, ntnbInterest.calculateInterest(), 1e-6);
 	}
 
 }
