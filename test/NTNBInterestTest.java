@@ -1,33 +1,41 @@
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
+import java.util.Arrays;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
 public class NTNBInterestTest {
 	
 	NTNBInterest ntnbInterest;
+	double expected;
 	
-	@Before
-	public void setUp() {
+	public NTNBInterestTest(double i, int n, int dcp, int dct, double expected) {
 		ntnbInterest = new NTNBInterest();
+		
+		ntnbInterest.setI(i);
+		ntnbInterest.setN(n);
+		ntnbInterest.setDcp(dcp);
+		ntnbInterest.setDct(dct);
+		
+		this.expected = expected;
+	}
+	
+	@Parameters
+	public static Iterable data(){
+		return Arrays.asList(new Object[][]{
+			{0.49, 6, 423, 397, 1.00260747},
+			{1.23, 3, 120, 115, 1.00319421},
+			{2.4353, 2, 60, 48, 1.00502533}
+		});
 	}
 	
 	@Test
 	public void testInterestFactorCalculation() throws Exception {
-		ntnbInterest.setI(0.49);
-		ntnbInterest.setN(6);
-		ntnbInterest.setDcp(423);
-		ntnbInterest.setDct(397);
-		
-		assertEquals(1.00260747, ntnbInterest.calculateIntestFactor(), 1e-8);
+		assertEquals(expected, ntnbInterest.calculateIntestFactor(), 1e-8);
 	}
 
-	@Test
-	public void testInterestFactorCalculation2() throws Exception {
-		ntnbInterest.setI(1.23);
-		ntnbInterest.setN(3);
-		ntnbInterest.setDcp(120);
-		ntnbInterest.setDct(115);
-		
-		assertEquals(1.00319421, ntnbInterest.calculateIntestFactor(), 1e-8);
-	}	
 }
